@@ -9,11 +9,12 @@ import SwiftUI
 
 struct PostPlayerView: View {
     var post = "RF"
+    var width: CGFloat = 34
     var body: some View {
         ZStack {
             Circle()
                 .foregroundStyle(.orangeApp)
-                .frame(width: 34)
+                .frame(width: width)
             Text(post)
                 .foregroundStyle(.white)
                 .font(.system(size: 16, weight: .heavy))

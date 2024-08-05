@@ -23,6 +23,7 @@ public class Player:NSManagedObject {
     @NSManaged public var playerName: String?
     @NSManaged public var posr: String?
     @NSManaged public var team: String?
+    @NSManaged public var isFavorite: Bool
 
 }
 

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PlayerCellView: View {
     
-    let player: Player
+    @ObservedObject var player: Player
     
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .top)) {
@@ -17,6 +17,7 @@ struct PlayerCellView: View {
             if let imageData = player.photo{
                 Image(uiImage: imageData)
                     .resizable()
+                    .frame(width: 158, height: 188)
                     .aspectRatio(contentMode: .fill)
             }else{
                 Image(.no).resizable()

@@ -9,6 +9,9 @@ import SwiftUI
 
 struct OrangeButtonView: View {
     var text = "View card"
+    var width: CGFloat = 158
+    var height: CGFloat = 42
+    var radius: CGFloat = 13
     var body: some View {
         ZStack {
             Color.orangeApp
@@ -16,8 +19,8 @@ struct OrangeButtonView: View {
                 .foregroundStyle(.white)
                 .font(.system(size: 14, weight: .heavy))
         }
-        .frame(width: 158,height: 42)
-        .cornerRadius(13)
+        .frame(width: width, height: height)
+        .cornerRadius(radius)
     }
 }
 

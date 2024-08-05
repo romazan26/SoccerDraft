@@ -12,10 +12,12 @@ struct MainView: View {
             TabView {
                 AllPlayersView(isFavorite: false)
                     .tabItem { Image(systemName: "chart.bar.doc.horizontal.fill") }
-                AllPlayersView(isFavorite: true).tabItem { Image(systemName: "heart") }
-                Text("Favorite").tabItem { Image(systemName: "person.3.fill") }
-                Text("Favorite").tabItem { Image(systemName: "gearshape.fill") }
-                   
+                AllPlayersView(isFavorite: true)
+                    .tabItem { Image(systemName: "heart") }
+                Text("Footbal")
+                    .tabItem { Image(systemName: "person.3.fill") }
+                Text("Settings")
+                    .tabItem { Image(systemName: "gearshape.fill") }
             }
             .onAppear(perform: {
                 UITabBar.appearance().backgroundColor = UIColor(resource: .second)
