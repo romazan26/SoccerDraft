@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AllPlayersView: View {
-    @StateObject var vm = ViewModel()
+    @StateObject var vm: ViewModel
     var isFavorite = false
     var body: some View {
         NavigationView {
@@ -75,5 +75,5 @@ struct AllPlayersView: View {
 }
 
 #Preview {
-    AllPlayersView()
+    AllPlayersView(vm: ViewModel())
 }

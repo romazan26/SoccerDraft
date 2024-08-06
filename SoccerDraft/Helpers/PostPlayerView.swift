@@ -17,7 +17,7 @@ struct PostPlayerView: View {
                 .frame(width: width)
             Text(post)
                 .foregroundStyle(.white)
-                .font(.system(size: 16, weight: .heavy))
+                .font(.system(size: width / 2, weight: .heavy))
         }
     }
 }

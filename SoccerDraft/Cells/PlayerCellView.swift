@@ -11,13 +11,15 @@ struct PlayerCellView: View {
     
     @ObservedObject var player: Player
     
+    var width: CGFloat = 158
+    var   height: CGFloat = 188
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .top)) {
             //MARK: - Photo player
             if let imageData = player.photo{
                 Image(uiImage: imageData)
                     .resizable()
-                    .frame(width: 158, height: 188)
+                    .frame(width: width, height: height)
                     .aspectRatio(contentMode: .fill)
             }else{
                 Image(.no).resizable()
@@ -27,20 +29,20 @@ struct PlayerCellView: View {
            
             Text("\(player.playerName ?? "")")
                 .foregroundStyle(.white)
-                .font(.system(size: 16, weight: .heavy))
-                .padding(.top, 150)
+                .font(.system(size: width / 10, weight: .heavy))
+                .padding(.top, width)
             
             //MARK: - Post player
-            PostPlayerView(post: "\(player.posr ?? "")")
-                .padding(.top)
-                .padding(.trailing, 95)
+            PostPlayerView(post: "\(player.posr ?? "")", width: width / 5)
+                .padding(.top, 10)
+                .padding(.trailing, width / 1.53)
             
         }
-        .frame(width: 158, height: 188)
-        .cornerRadius(16)
+        .frame(width: width, height: height)
+        .cornerRadius(width / 10)
     }
 }
 
-#Preview {
-    PlayerCellView(player: Player())
-}
+//#Preview {
+//    PlayerCellView(player: Player())
+//}

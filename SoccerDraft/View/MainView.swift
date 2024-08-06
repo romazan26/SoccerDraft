@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct MainView: View {
+    @StateObject var vm = ViewModel()
     var body: some View {
             TabView {
-                AllPlayersView(isFavorite: false)
+                AllPlayersView(vm: vm, isFavorite: false)
                     .tabItem { Image(systemName: "chart.bar.doc.horizontal.fill") }
-                AllPlayersView(isFavorite: true)
+                AllPlayersView(vm: vm, isFavorite: true)
                     .tabItem { Image(systemName: "heart") }
-                Text("Footbal")
+                FieldView(vm: vm)
                     .tabItem { Image(systemName: "person.3.fill") }
                 Text("Settings")
                     .tabItem { Image(systemName: "gearshape.fill") }

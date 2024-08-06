@@ -17,6 +17,7 @@
 		30033B402C61369A007DBE0A /* TextFieldCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30033B3F2C61369A007DBE0A /* TextFieldCustom.swift */; };
 		30033B422C613EB8007DBE0A /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30033B412C613EB8007DBE0A /* PhotoPicker.swift */; };
 		30033B462C6152EF007DBE0A /* PlayersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30033B452C6152EF007DBE0A /* PlayersListView.swift */; };
+		30033B4A2C61FD22007DBE0A /* FieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30033B492C61FD22007DBE0A /* FieldView.swift */; };
 		3089AEF02C6014B4001EA067 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3089AEEF2C6014B4001EA067 /* AppDelegate.swift */; };
 		3089AEF22C6014B4001EA067 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3089AEF12C6014B4001EA067 /* SceneDelegate.swift */; };
 		3089AEF42C6014B4001EA067 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3089AEF32C6014B4001EA067 /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 		30033B3F2C61369A007DBE0A /* TextFieldCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCustom.swift; sourceTree = "<group>"; };
 		30033B412C613EB8007DBE0A /* PhotoPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		30033B452C6152EF007DBE0A /* PlayersListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersListView.swift; sourceTree = "<group>"; };
+		30033B492C61FD22007DBE0A /* FieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldView.swift; sourceTree = "<group>"; };
 		3089AEEC2C6014B4001EA067 /* SoccerDraft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoccerDraft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3089AEEF2C6014B4001EA067 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3089AEF12C6014B4001EA067 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				3089AF042C6014EC001EA067 /* MainView.swift */,
 				30033B302C60DC69007DBE0A /* AllPlayersView.swift */,
 				30033B3D2C613415007DBE0A /* AddPlayerView.swift */,
+				30033B492C61FD22007DBE0A /* FieldView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				30033B462C6152EF007DBE0A /* PlayersListView.swift in Sources */,
 				30033B422C613EB8007DBE0A /* PhotoPicker.swift in Sources */,
 				30033B3C2C60ED4A007DBE0A /* PostPlayerView.swift in Sources */,
+				30033B4A2C61FD22007DBE0A /* FieldView.swift in Sources */,
 				3089AEF42C6014B4001EA067 /* ViewController.swift in Sources */,
 				3089AF052C6014EC001EA067 /* MainView.swift in Sources */,
 				30033B3A2C60EB33007DBE0A /* OrangeButtonView.swift in Sources */,

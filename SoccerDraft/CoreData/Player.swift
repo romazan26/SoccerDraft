@@ -10,6 +10,8 @@
 import Foundation
 import CoreData
 import UIKit
+import SwiftUI
+import UniformTypeIdentifiers
 
 @objc(Player)
 public class Player:NSManagedObject {
@@ -30,3 +32,4 @@ public class Player:NSManagedObject {
 extension Player : Identifiable {
 
 }
+
