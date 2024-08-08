@@ -11,21 +11,52 @@ struct FieldView: View {
     @StateObject var vm: ViewModel
     
     var body: some View {
-            ZStack(alignment: Alignment(horizontal: .center, vertical: .top) ){
-                Image(.footbalField)
-                    .resizable()
-                    .ignoresSafeArea()
+        ZStack(alignment: Alignment(horizontal: .center, vertical: .top) ){
+            Image(.footbalField)
+                .resizable()
+                .ignoresSafeArea()
+            
+            ZStack {
                 HStack {
-                    ForEach(vm.allPlayers) { player in
+                    ForEach(vm.sortPlayers) { player in
                         DraggablePlayer(player: player)
                     }
                 }
                 .padding()
-                .frame(width: 393)
+                .frame(width: 393, height: 150)
                 .background(Color.main)
                 
+                if vm.allPlayers.count > vm.sortCount{
+                    Button {
+                        vm.sortCount += 4
+                        vm.sortPlayer()
+                    } label: {
+                        Image(systemName: "chevron.right.circle.fill")
+                            .resizable()
+                            .frame(width: 40, height: 40)
+                            .foregroundStyle(.orangeApp)
+                    }.padding(.leading, 350)
+                }
+                
+                if vm.allPlayers.count < vm.sortCount{
+                    Button {
+                        vm.sortCount -= 4
+                        vm.sortPlayer()
+                    } label: {
+                        Image(systemName: "chevron.left.circle.fill")
+                            .resizable()
+                            .frame(width: 40, height: 40)
+                            .foregroundStyle(.orangeApp)
+                    }.padding(.trailing, 350)
+                }
                 
             }
+            .animation(.bouncy)
+            .onAppear {
+                vm.sortPlayer()
+            }
+            
+        }
     }
 }
 
@@ -46,7 +77,7 @@ struct DraggablePlayer: View {
                     height = 70
                 })
                 .onEnded({ value in
-                   // position = .zero
+                    
                 })
             )
     }

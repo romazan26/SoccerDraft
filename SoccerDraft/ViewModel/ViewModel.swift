@@ -16,6 +16,9 @@ final class ViewModel: ObservableObject{
     @Published var allPlayers: [Player] = []
     @Published var favoritePlayers: [Player] = []
     
+    @Published var sortPlayers: [Player] = []
+    @Published var sortCount = 4
+    
     @Published var simplePlayerName = ""
     @Published var simpleAge = ""
     @Published var simpleTeam = ""
@@ -31,6 +34,16 @@ final class ViewModel: ObservableObject{
     init(){
         getAllPlayers()
         getFavoritePlayer()
+    }
+    
+    //MARK: - Sorting
+    func sortPlayer(){
+        sortPlayers.removeAll()
+        for i in (sortCount - 4...sortCount - 1) {
+            if allPlayers.count > i {
+                sortPlayers.append(allPlayers[i])
+            }
+        }
     }
     
     //MARK: - Edite player data
