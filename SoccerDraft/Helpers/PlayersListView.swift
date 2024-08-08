@@ -38,43 +38,39 @@ struct PlayersListView: View {
     
     var body: some View {
         
-            VStack{
-                ForEach(groupedItems, id: \.self) { subItem in
-                    HStack{
+        VStack{
+            ForEach(groupedItems, id: \.self) { subItem in
+                HStack{
+                    
+                    ForEach(subItem, id: \.self) { item in
                         
-                        ForEach(subItem, id: \.self) { item in
-                            
-                            VStack {
-                                PlayerCellView(player: item)
-                                NavigationLink {
-                                    AddPlayerView(vm: vm, isEditeMod: true, editePlayer: item)
-                                } label: {
-                                    OrangeButtonView(text: "View card")
-
-                                }
-                               
+                        VStack {
+                            PlayerCellView(player: item)
+                            NavigationLink {
+                                AddPlayerView(vm: vm, isEditeMod: true, editePlayer: item)
+                            } label: {
+                                OrangeButtonView(text: "View card")
+                                
                             }
-                            Spacer()
                             
                         }
                         Spacer()
                         
-                    }.padding(.leading, 30)
-                }
+                    }
+                    Spacer()
+                    
+                }.padding(.leading, 30)
+            }
             
         }
         
-    
-    
+        
+        
         .onAppear(perform: {
-            print("apera list")
             self.groupedItems = createGroupItems(items)
         })
         
-//        .sheet(isPresented: $vm.isPresentAddView, content: {
-//            AddPlayerView(vm: vm)
-//        })
-}
+    }
 }
 
 //#Preview {

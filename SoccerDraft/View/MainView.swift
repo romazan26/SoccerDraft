@@ -17,7 +17,7 @@ struct MainView: View {
                     .tabItem { Image(systemName: "heart") }
                 FieldView(vm: vm)
                     .tabItem { Image(systemName: "person.3.fill") }
-                Text("Settings")
+                SettingsView()
                     .tabItem { Image(systemName: "gearshape.fill") }
             }
             .onAppear(perform: {

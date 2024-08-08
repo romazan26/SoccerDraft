@@ -18,6 +18,11 @@
 		30033B422C613EB8007DBE0A /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30033B412C613EB8007DBE0A /* PhotoPicker.swift */; };
 		30033B462C6152EF007DBE0A /* PlayersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30033B452C6152EF007DBE0A /* PlayersListView.swift */; };
 		30033B4A2C61FD22007DBE0A /* FieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30033B492C61FD22007DBE0A /* FieldView.swift */; };
+		30033B992C64A591007DBE0A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30033B982C64A591007DBE0A /* SettingsView.swift */; };
+		30033B9B2C64A5CB007DBE0A /* SettingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30033B9A2C64A5CB007DBE0A /* SettingButton.swift */; };
+		30033BA02C64A65F007DBE0A /* webView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30033B9C2C64A65F007DBE0A /* webView.swift */; };
+		30033BA12C64A65F007DBE0A /* webViewBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30033B9D2C64A65F007DBE0A /* webViewBack.swift */; };
+		30033BA22C64A65F007DBE0A /* WebViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30033B9E2C64A65F007DBE0A /* WebViewPage.swift */; };
 		3089AEF02C6014B4001EA067 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3089AEEF2C6014B4001EA067 /* AppDelegate.swift */; };
 		3089AEF22C6014B4001EA067 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3089AEF12C6014B4001EA067 /* SceneDelegate.swift */; };
 		3089AEF42C6014B4001EA067 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3089AEF32C6014B4001EA067 /* ViewController.swift */; };
@@ -42,6 +47,11 @@
 		30033B412C613EB8007DBE0A /* PhotoPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		30033B452C6152EF007DBE0A /* PlayersListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersListView.swift; sourceTree = "<group>"; };
 		30033B492C61FD22007DBE0A /* FieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldView.swift; sourceTree = "<group>"; };
+		30033B982C64A591007DBE0A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		30033B9A2C64A5CB007DBE0A /* SettingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingButton.swift; sourceTree = "<group>"; };
+		30033B9C2C64A65F007DBE0A /* webView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = webView.swift; sourceTree = "<group>"; };
+		30033B9D2C64A65F007DBE0A /* webViewBack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = webViewBack.swift; sourceTree = "<group>"; };
+		30033B9E2C64A65F007DBE0A /* WebViewPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewPage.swift; sourceTree = "<group>"; };
 		3089AEEC2C6014B4001EA067 /* SoccerDraft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoccerDraft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3089AEEF2C6014B4001EA067 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3089AEF12C6014B4001EA067 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,13 +96,50 @@
 		30033B382C60EB17007DBE0A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				30033B9F2C64A65F007DBE0A /* WebView */,
 				30033B412C613EB8007DBE0A /* PhotoPicker.swift */,
 				30033B392C60EB33007DBE0A /* OrangeButtonView.swift */,
 				30033B3B2C60ED4A007DBE0A /* PostPlayerView.swift */,
 				30033B3F2C61369A007DBE0A /* TextFieldCustom.swift */,
 				30033B452C6152EF007DBE0A /* PlayersListView.swift */,
+				30033B9A2C64A5CB007DBE0A /* SettingButton.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		30033B952C64A54C007DBE0A /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				30033B3D2C613415007DBE0A /* AddPlayerView.swift */,
+				30033B302C60DC69007DBE0A /* AllPlayersView.swift */,
+			);
+			path = Players;
+			sourceTree = "<group>";
+		};
+		30033B962C64A568007DBE0A /* Field */ = {
+			isa = PBXGroup;
+			children = (
+				30033B492C61FD22007DBE0A /* FieldView.swift */,
+			);
+			path = Field;
+			sourceTree = "<group>";
+		};
+		30033B972C64A575007DBE0A /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				30033B982C64A591007DBE0A /* SettingsView.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		30033B9F2C64A65F007DBE0A /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				30033B9C2C64A65F007DBE0A /* webView.swift */,
+				30033B9D2C64A65F007DBE0A /* webViewBack.swift */,
+				30033B9E2C64A65F007DBE0A /* WebViewPage.swift */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 		3089AEE32C6014B4001EA067 = {
@@ -133,10 +180,10 @@
 		3089AF032C6014CF001EA067 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				30033B972C64A575007DBE0A /* Setting */,
+				30033B962C64A568007DBE0A /* Field */,
+				30033B952C64A54C007DBE0A /* Players */,
 				3089AF042C6014EC001EA067 /* MainView.swift */,
-				30033B302C60DC69007DBE0A /* AllPlayersView.swift */,
-				30033B3D2C613415007DBE0A /* AddPlayerView.swift */,
-				30033B492C61FD22007DBE0A /* FieldView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -227,10 +274,12 @@
 				30033B3E2C613415007DBE0A /* AddPlayerView.swift in Sources */,
 				3089AF092C601673001EA067 /* SoccerDraft.xcdatamodeld in Sources */,
 				30033B402C61369A007DBE0A /* TextFieldCustom.swift in Sources */,
+				30033BA12C64A65F007DBE0A /* webViewBack.swift in Sources */,
 				30033B462C6152EF007DBE0A /* PlayersListView.swift in Sources */,
 				30033B422C613EB8007DBE0A /* PhotoPicker.swift in Sources */,
 				30033B3C2C60ED4A007DBE0A /* PostPlayerView.swift in Sources */,
 				30033B4A2C61FD22007DBE0A /* FieldView.swift in Sources */,
+				30033B9B2C64A5CB007DBE0A /* SettingButton.swift in Sources */,
 				3089AEF42C6014B4001EA067 /* ViewController.swift in Sources */,
 				3089AF052C6014EC001EA067 /* MainView.swift in Sources */,
 				30033B3A2C60EB33007DBE0A /* OrangeButtonView.swift in Sources */,
@@ -241,6 +290,9 @@
 				30033B372C60EAD0007DBE0A /* PlayerCellView.swift in Sources */,
 				30033B2F2C60AFCB007DBE0A /* CoreDataManager.swift in Sources */,
 				3089AF0D2C6017D4001EA067 /* UIImageTransformer.swift in Sources */,
+				30033BA02C64A65F007DBE0A /* webView.swift in Sources */,
+				30033BA22C64A65F007DBE0A /* WebViewPage.swift in Sources */,
+				30033B992C64A591007DBE0A /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
